@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State var travelRadius: Double = 300
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    @ObservedObject var settings = SettingsManager()
     
     var body: some View {
         VStack {
@@ -27,14 +28,14 @@ struct SettingsView: View {
             Text("Your Ride Experience").font(.largeTitle).bold()
             Spacer().frame(height: 100)
             Text("How far do you like to drive?").bold()
-            Slider(value: $travelRadius, in: 100...500, step: 100)
+            Slider(value: $settings.travelRadius, in: 100...500, step: 100)
             
             HStack {
-                ForEach(0..<Int(travelRadius/100), id:\.self) { _ in
+                ForEach(0..<Int(settings.travelRadius/100), id:\.self) { _ in
                     Image(systemName: "car").font(.largeTitle)
                 }
             }.padding(.top, 10)
-            Text("My radius is \(Int(travelRadius)) km")
+            Text("My radius is \(Int(settings.travelRadius)) km")
                 .font(.headline).foregroundColor(.gray)
             
             Spacer()
