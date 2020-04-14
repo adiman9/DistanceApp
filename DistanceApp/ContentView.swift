@@ -13,6 +13,7 @@ struct ContentView: View {
     
     @State private var centerCoordinate = CLLocationCoordinate2D()
     @State private var locations = [MKPointAnnotation]()
+    @State private var showSettings = false
     
     @ObservedObject var dm = DistanceManager()
     
@@ -42,7 +43,12 @@ struct ContentView: View {
                     self.locations.removeAll()
                 }
             }, label: {
-                Image(systemName: "plus")
+                if self.locations.count != 2 {
+                    Image(systemName: "plus")
+                } else {
+                    Image(systemName: "trash")
+                }
+                
             })
                 .padding()
                 .background(Color.red)
@@ -53,12 +59,19 @@ struct ContentView: View {
             
             Text("Distance Evaluation").font(.title).bold()
             Circle().frame(width: 300, height: 300)
+            
+            if dm.distance != 0 {
+                Text("\(Int(dm.distance ?? 0)) km")
+            }
+            
             HStack {
                 Spacer()
                 Button(action: {
-                    
+                    self.showSettings.toggle()
                 }, label: {
                     Image(systemName: "gear")
+                }).sheet(isPresented: $showSettings, content: {
+                    SettingsView()
                 })
             }.padding(.trailing, 20)
         }
