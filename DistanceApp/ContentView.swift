@@ -16,6 +16,7 @@ struct ContentView: View {
     @State private var showSettings = false
     
     @ObservedObject var dm = DistanceManager()
+    @ObservedObject var settings = SettingsManager()
     
     var body: some View {
         VStack {
@@ -58,11 +59,17 @@ struct ContentView: View {
                 .padding(.top, -35)
             
             Text("Distance Evaluation").font(.title).bold()
-            Circle().frame(width: 300, height: 300)
             
-            if dm.distance != 0 {
-                Text("\(Int(dm.distance ?? 0)) km")
+            ZStack {
+                RingView(percentage: (dm.distance ?? 0) / Double(settings.travelRadius),
+                         startColor: .red, endColor: .pink)
+                    .aspectRatio(contentMode: .fit)
+                
+                if dm.distance != 0 {
+                    Text("\(Int(dm.distance ?? 0)) km").font(.title).bold()
+                }
             }
+            
             
             HStack {
                 Spacer()

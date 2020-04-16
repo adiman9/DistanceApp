@@ -10,6 +10,7 @@
 		3A02DDBC24453CF3005647AB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02DDBB24453CF3005647AB /* SettingsView.swift */; };
 		3A02DDBE24454368005647AB /* SettingsDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02DDBD24454368005647AB /* SettingsDefaults.swift */; };
 		3A02DDC02445456B005647AB /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02DDBF2445456B005647AB /* SettingsManager.swift */; };
+		3A02DDC22447E9C4005647AB /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02DDC12447E9C4005647AB /* RingView.swift */; };
 		94375E27243E68CE00E0D330 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94375E26243E68CE00E0D330 /* AppDelegate.swift */; };
 		94375E29243E68CE00E0D330 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94375E28243E68CE00E0D330 /* SceneDelegate.swift */; };
 		94375E2B243E68CE00E0D330 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94375E2A243E68CE00E0D330 /* ContentView.swift */; };
@@ -24,6 +25,7 @@
 		3A02DDBB24453CF3005647AB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3A02DDBD24454368005647AB /* SettingsDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDefaults.swift; sourceTree = "<group>"; };
 		3A02DDBF2445456B005647AB /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		3A02DDC12447E9C4005647AB /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		94375E23243E68CE00E0D330 /* DistanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94375E26243E68CE00E0D330 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94375E28243E68CE00E0D330 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				94375E3A243E77D900E0D330 /* MapView.swift */,
 				94375E28243E68CE00E0D330 /* SceneDelegate.swift */,
 				94375E2A243E68CE00E0D330 /* ContentView.swift */,
+				3A02DDC12447E9C4005647AB /* RingView.swift */,
 				3A02DDBD24454368005647AB /* SettingsDefaults.swift */,
 				3A02DDBF2445456B005647AB /* SettingsManager.swift */,
 				3A02DDBB24453CF3005647AB /* SettingsView.swift */,
@@ -164,6 +167,7 @@
 				94375E27243E68CE00E0D330 /* AppDelegate.swift in Sources */,
 				3A02DDBE24454368005647AB /* SettingsDefaults.swift in Sources */,
 				94375E3B243E77D900E0D330 /* MapView.swift in Sources */,
+				3A02DDC22447E9C4005647AB /* RingView.swift in Sources */,
 				94375E29243E68CE00E0D330 /* SceneDelegate.swift in Sources */,
 				3A02DDC02445456B005647AB /* SettingsManager.swift in Sources */,
 				3A02DDBC24453CF3005647AB /* SettingsView.swift in Sources */,
